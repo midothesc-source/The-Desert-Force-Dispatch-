@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { User } from 'firebase/auth';
 import { Header } from './components/Header';
+import { MissionBriefTicker } from './components/MissionBriefTicker';
 import { TacticalToolbar } from './components/TacticalToolbar';
 import { OperativeCard } from './components/OperativeCard';
 import { DossierModal } from './components/DossierModal';
@@ -389,6 +390,9 @@ export default function App() {
 
       {/* Main Content Area */}
       <main className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-6 space-y-6 flex-1">
+        {/* Tactical Mission Brief Ticker */}
+        <MissionBriefTicker operatives={operatives} />
+
         {/* Tactical Search & Filter Toolbar */}
         <TacticalToolbar
           filters={filters}
