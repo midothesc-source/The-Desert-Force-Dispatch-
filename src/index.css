@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+:root {
+  --bg-primary: #0b0b0c;
+  --bg-secondary: #121317;
+  --bg-card: rgba(18, 19, 24, 0.88);
+  --gold-accent: #d4af37;
+  --gold-glow: rgba(212, 175, 55, 0.25);
+  --border-tactical: rgba(212, 175, 55, 0.22);
+}
+
+body {
+  background-color: #0b0b0c;
+  color: #e5e5e7;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Subtle tactical grid background pattern */
+.tactical-grid-bg {
+  background-image: 
+    linear-gradient(to right, rgba(212, 175, 55, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(212, 175, 55, 0.035) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* Gold glow accent border */
+.tactical-card {
+  background: rgba(18, 19, 23, 0.92);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(12px);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.tactical-card:hover {
+  border-color: rgba(212, 175, 55, 0.45);
+  box-shadow: 0 8px 30px -4px rgba(212, 175, 55, 0.12);
+}
+
+/* Scanline radar animation */
+@keyframes radar-sweep {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(1000%); }
+}
+
+.radar-sweep-bar {
+  animation: radar-sweep 4s linear infinite;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0b0b0c;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(212, 175, 55, 0.3);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(212, 175, 55, 0.6);
+}
+
+/* Official Google Sign-In Material Button styles */
+.gsi-material-button {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: #131314;
+  border: 1px solid #4a4539;
+  border-radius: 6px;
+  box-sizing: border-box;
+  color: #e3e3e3;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  font-family: 'Roboto', arial, sans-serif;
+  font-size: 13px;
+  height: 38px;
+  letter-spacing: 0.25px;
+  outline: none;
+  overflow: hidden;
+  padding: 0 16px 0 12px;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: auto;
+  transition: background-color .218s, border-color .218s, box-shadow .218s;
+}
+
+.gsi-material-button:hover {
+  background-color: #1e1f20;
+  border-color: #d4af37;
+  box-shadow: 0 1px 3px 0 rgba(212, 175, 55, 0.25);
+}
+
+.gsi-material-button .gsi-material-button-icon {
+  height: 20px;
+  margin-right: 10px;
+  min-width: 20px;
+  width: 20px;
+}
+
+.gsi-material-button-contents {
+  font-weight: 500;
+}

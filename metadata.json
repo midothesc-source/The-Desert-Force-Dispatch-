@@ -1,0 +1,6 @@
+{
+  "name": "The Desert Force Dispatch",
+  "description": "Tactical contact and relationship intelligence command center featuring classified operative dossiers, AI mission briefs, and Google Contacts synchronization.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
